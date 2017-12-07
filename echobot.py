@@ -63,7 +63,7 @@ def echo_all(updates):
             happystickers =["CAADAgAD7wIAAlwCZQN1mgoBtgKe1gI","CAADAgADQwADzUhuAqNVbfK4IYpXAg","CAADAgADeQADl4eRBKiw_kASyMKJAg","CAADAgADRgADihKqDpNhzzTM57IiAg"]
             happy = ["круто","лучше","крутая","крутой","клевая","клевый","клево","прикольно","прикольная","прикольный","здорово","like","лайк","\ud83d\udc4d","\ud83d\ude4f","\ud83d\udcaa"]
             yes = ["ага", "да","конечно","угу","конеш","ясен хер","давай","точно","покажи","покежь"]
-            hello = ["привет","дратути", "прив", "здравствуй","здравствуйте","добрый день","добрый вечер","доброе утро","приветики","здарова","хай","hi","hello","хеллоу","халлоу","хелоу","халоу"]
+            hello = ["здрасьте","привет","дратути", "прив", "здравствуй","здравствуйте","добрый день","добрый вечер","доброе утро","приветики","здарова","хай","hi","hello","хеллоу","халлоу","хелоу","халоу"]
             helloans = ["И тебе не хворать","дратути","приветики"]
             tell = ["расскажи","рассказывай"]
             tellans ="""Суд, дело об избиении Деда Мороза. На скамейке интеллигентного вида мужичок и обычный парень. Судья спрашивает интеллигента:
@@ -77,10 +77,10 @@ def echo_all(updates):
             universalans = ["сам знаешь","ой всё","а самому подумать никак?","спроси у тополя"]
             no = ["нет", "неа"]
             kakans = ["нормально", "никак","лучше расскажи у тя как"]
-            voicehelp = ["сири","siri","алиса","алису","алисе","алисы","алиска"]
+            voicehelp = ["сири","siri","алиса","алису","алисе","алисы","алиска","алисой"]
             voicehelpans = ["да, в жопу эту бабу","а вот щас обидно было","ну и иди к ней"]
             start = ["В штанах у тебя ", "Жизнь твоя "]
-            greeting = "Дратути, " + first_name + "! Показать че я умею?"
+            greeting = "Дратути, " + first_name + "! Давай поболтаем? Спрашивай че угодно"
             meme = "http://memesmix.net/media/created/nzzwbb.jpg"
             memeno = "http://memesmix.net/media/created/rm7pi9.jpg"
             db.add_item(text, chat, first_name, last_name)
@@ -115,6 +115,8 @@ def echo_all(updates):
             send_sticker(sticker,chat)
             print(e)
             print(sticker)
+        except KeyError as e:
+            print('I got a KeyError - reason "%s"' % str(e))
 
 
 def send_message(text, chat_id):
